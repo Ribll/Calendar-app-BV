@@ -1,0 +1,196 @@
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidebar ul li a.selected {
+    background-color: lightblue;
+}
+
+.sidebar ul .sub-menu {
+    list-style-type: none;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: none;
+}
+
+.sidebar ul .expandable-header {
+    cursor: pointer;
+}
+
+.sidebar ul .expandable-header::after {
+    content: ' ▼';
+}
+
+.sidebar ul .expandable-header.expanded::after {
+    content: ' ▲';
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters label {
+    margin-right: 10px;
+}
+
+.filters select,
+.filters input {
+    margin-right: 10px;
+}
+
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th,
+.calendar td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    height: 100px;
+    vertical-align: top;
+}
+
+.transparent-textbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 40%;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0.8;
+    resize: none;
+    text-align: left;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #000;
+}
+
+.transparent-textbox::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.day-number {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.calendar td.empty {
+    background-color: #f9f9f9;
+}
+
+.calendar td.saturday,
+.calendar td.sunday {
+    background-color: #fffacd;
+}
+
+.calendar select {
+    width: 95%;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.calendar td[data-status="Assenza"] {
+    background-color: #ffcccc;
+}
+
+.calendar td[data-status="Trasferta"] {
+    background-color: #cce5ff;
+}
+
+.calendar td[data-status="Smart"] {
+    background-color: #d4edda;
+}
+
+.calendar td[data-status="Reperibile"] {
+    background-color: #f09c6c;
+}
+
+.calendar td[data-status="Recupero"] {
+    background-color: #d1ecf1;
+}
+
+.person-info {
+    text-align: left;
+    padding-left: 25px;
+    padding-top: 5px;
+}
+
+.person-info.status-assenza {
+    color: #FF0000;
+}
+
+.person-info.status-trasferta {
+    color: #0000CD;
+}
+
+.person-info.status-smart {
+    color: #228B22;
+}
+
+.person-info.status-reperibile {
+    color: #f09c6c;
+}
+
+.person-info.status-recupero {
+    color: #d1ecf1;
+}
+
+.person-info.status-default {
+    color: 9c9c9c;
+}
