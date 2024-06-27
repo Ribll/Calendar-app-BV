@@ -46,8 +46,8 @@ body {
 .sidebar ul .sub-menu {
     list-style-type: none;
     padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
     display: none;
 }
 
@@ -116,7 +116,7 @@ body {
 }
 
 .transparent-textbox::placeholder {
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 0.4); /* quasi trasparente */
 }
 
 .day-number {
@@ -166,9 +166,9 @@ body {
 }
 
 .person-info {
-    text-align: left;
+	text-align: left;
     padding-left: 25px;
-    padding-top: 5px;
+	padding-top:5px;
 }
 
 .person-info.status-assenza {
@@ -176,7 +176,7 @@ body {
 }
 
 .person-info.status-trasferta {
-    color: #0000CD;
+    color: 	#0000CD;
 }
 
 .person-info.status-smart {
@@ -192,5 +192,7 @@ body {
 }
 
 .person-info.status-default {
-    color: 9c9c9c;
+    color: 9c9c9c; /* Default black color for "In sede" */
 }
+
+
